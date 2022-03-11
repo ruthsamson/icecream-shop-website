@@ -1,0 +1,62 @@
+
+.column {
+float: left;
+width: 50%;
+
+}
+
+.title {
+    background-color: hotpink;
+    color: bisque;
+    padding: 1em;
+    border: dotted;
+}
+.icecream {
+    font-weight: 700;
+    list-style-type: none;
+}
+
+.icecream li {
+    padding: 1em;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: antiquewhite;
+    margin: 0.5em;
+}
+
+.icecream li i {
+    padding: 1em;
+}
+
+.icecream .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color:#405061;
+    line-height: 1em;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+}
+
+.icecream li.selected {
+    background-color: #CFD8DC;
+    color: white;
+}
+
+.icecream li.selected:hover {
+    background-color: #BBD8DC;
+    color: white;
+}
+
+.display {
+    padding: 1em;
+    background-color: #405061;
+    color: antiquewhite;
+    font-size: 18px;
+}
+
+.icecream h2.selected {
+    background-color: #BBD8DC;
+}

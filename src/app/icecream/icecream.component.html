@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="column">
+        <h2 class="title">Ice Cream</h2>
+        <ul class="icecream">
+            <li *ngFor="let icecream of icecream"
+            [class.selected]="icecream === selectedIcecream"
+            (click)="onSelect(icecream)">
+                <span class="badge">{{icecream.id}}</span>
+                {{icecream.name}}
+                <!-- <i>{{icecream.description}}</i>
+                <i>{{icecream.rating}}</i> -->
+            </li>
+        </ul>
+    </div>
+    <div class="column">
+        <div *ngIf="selectedIcecream">
+            <h2 class="title">{{selectedIcecream.name}}</h2>
+            <div class="display id">
+                <span>Id:</span>
+                {{selectedIcecream.id}}
+            </div>
+            <div class="display description">
+                <span>Description:</span>
+                {{selectedIcecream.description}}
+            </div>
+            <div class="display rating">
+                <span>Rating:</span>
+                {{selectedIcecream.rating}}
+            </div>
+        </div>
+    </div>
+</div>
