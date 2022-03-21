@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Icecream } from '../icecream';
 import { ICECREAM } from '../icecream-list';
+import { IcecreamService } from '../icecream.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-icecream',
@@ -8,17 +10,23 @@ import { ICECREAM } from '../icecream-list';
   styleUrls: ['./icecream.component.css']
 })
 export class IcecreamComponent implements OnInit {
-  icecream = ICECREAM;
+  icecream?: Icecream[];
 
   selectedIcecream?: Icecream;
 
-  constructor() { }
+  constructor(private icecreamService: IcecreamService, private messageService: MessageService) { }
+
+  getIcecream(): void {
+    this.icecreamService.getIcecream().subscribe(icecream => this.icecream = icecream);
+  }
 
   ngOnInit(): void {
+    this.getIcecream();
   }
 
   onSelect(icecream: Icecream): void {
     this.selectedIcecream = icecream;
+    this.messageService.add(`IcecreamComponent: Selected icecream id= ${icecream.id}`);
   }
 
 }

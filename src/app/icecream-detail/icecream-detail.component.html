@@ -1,0 +1,13 @@
+<div *ngIf="icecream">
+    <h2>{{icecream.name | uppercase}} Details</h2>
+    <div>
+      <label>Edit Flavor Name:
+        <input [(ngModel)]="icecream.name" placeholder="name"/>
+      </label>
+    </div>
+    <div>
+        <label>Edit Rating:
+            <input [(ngModel)]="icecream.rating" placeholder="rating"/>
+          </label>
+    </div>
+</div>

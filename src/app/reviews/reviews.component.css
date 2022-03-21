@@ -1,0 +1,15 @@
+.review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+textarea {
+    width: 50%
+}
+
+input {
+    padding: 0.5em 1em;
+    margin-left: 5px;
+}
